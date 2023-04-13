@@ -26,6 +26,7 @@ export class FormViechildComponent implements OnInit {
       pdecs: this.PDecshhh.nativeElement.value,
       PCat: probability,
     };
+<<<<<<< HEAD
     if (((this.Pnamehhh.nativeElement.value.length > 4) && (this.PDecshhh.nativeElement.value.length > 4)) ) {
       this.customEvent3.emit(obj);
     }else{
@@ -33,5 +34,10 @@ export class FormViechildComponent implements OnInit {
     }
     this.Pnamehhh.nativeElement.value="";
     this.PDecshhh.nativeElement.value="";
+=======
+     pname="";
+     pdecs="";
+    this.customEvent3.emit(obj)
+>>>>>>> 15e7f462a184544d29a5947e54d9da67b02c3419
   }
 }
