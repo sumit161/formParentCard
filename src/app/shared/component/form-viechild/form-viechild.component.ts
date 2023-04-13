@@ -19,6 +19,8 @@ export class FormViechildComponent implements OnInit {
       pdecs: this.PDecshhh.nativeElement.value,
       PCat: probability,
     };
+     pname="";
+     pdecs="";
     this.customEvent3.emit(obj)
   }
 }
