@@ -16,12 +16,10 @@ export class FormToParentComponent implements OnInit {
       pdecs: this.Descrval,
       PCat: Probability,
     };
-    this.customEvent1.emit(obj);
-    if (this.Pnameval.length < 5) {
-      alert("Product text length is always greater than 4");
-    }
-    if (this.Descrval.length < 5) {
-      alert("ProductDescr text length is always greater than 4");
+    if (((this.Pnameval.length > 4) && (this.Descrval.length > 4)) ) {
+      this.customEvent1.emit(obj);
+    }else{
+      alert("Product text length is at least five ");
     }
     this.Pnameval = '';
     this.Descrval = '';

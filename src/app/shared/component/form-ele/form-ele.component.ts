@@ -17,7 +17,11 @@ export class FormEleComponent implements OnInit {
       pdecs: des.value,
       PCat: probability,
     };
-    this.customEvent2.emit(obj)
+      if (obj.pname.length > 4 && obj.pdecs.length > 4) {
+      this.customEvent2.emit(obj);
+    } else {
+      alert('Product text length is at least five ');
+    }
     Produ.value="";
     des.value="";
   }

@@ -26,7 +26,11 @@ export class FormViechildComponent implements OnInit {
       pdecs: this.PDecshhh.nativeElement.value,
       PCat: probability,
     };
-    this.customEvent3.emit(obj);
+    if (((this.Pnamehhh.nativeElement.value.length > 4) && (this.PDecshhh.nativeElement.value.length > 4)) ) {
+      this.customEvent3.emit(obj);
+    }else{
+      alert("Product text length is at least five ");
+    }
     this.Pnamehhh.nativeElement.value="";
     this.PDecshhh.nativeElement.value="";
   }
