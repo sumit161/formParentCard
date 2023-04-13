@@ -1,15 +1,22 @@
-import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { Iproduct, Ptype } from '../../model/interface';
 
 @Component({
   selector: 'app-form-viechild',
   templateUrl: './form-viechild.component.html',
-  styleUrls: ['./form-viechild.component.scss']
+  styleUrls: ['./form-viechild.component.scss'],
 })
 export class FormViechildComponent implements OnInit {
   @Output() customEvent3: EventEmitter<Iproduct> = new EventEmitter<Iproduct>();
-  @ViewChild("Pname") Pnamehhh!:ElementRef
-  @ViewChild("PDecs") PDecshhh!:ElementRef
+  @ViewChild('Pname') Pnamehhh!: ElementRef;
+  @ViewChild('PDecs') PDecshhh!: ElementRef;
   constructor() {}
 
   ngOnInit(): void {}
@@ -19,6 +26,8 @@ export class FormViechildComponent implements OnInit {
       pdecs: this.PDecshhh.nativeElement.value,
       PCat: probability,
     };
-    this.customEvent3.emit(obj)
+    this.customEvent3.emit(obj);
+    this.Pnamehhh.nativeElement.value="";
+    this.PDecshhh.nativeElement.value="";
   }
 }

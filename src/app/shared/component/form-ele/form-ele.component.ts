@@ -18,5 +18,7 @@ export class FormEleComponent implements OnInit {
       PCat: probability,
     };
     this.customEvent2.emit(obj)
+    Produ.value="";
+    des.value="";
   }
 }
